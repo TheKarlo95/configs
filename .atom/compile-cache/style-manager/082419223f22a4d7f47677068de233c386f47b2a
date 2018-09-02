@@ -1,0 +1,1 @@
+{"source":".select-list .atom-typescript .editor-colors {\n  background-color: #242424;\n  border: solid 0.1em #1f1f1f;\n  border-radius: 3px;\n  padding: 0 10px;\n  font-size: 1.15em;\n  overflow: hidden;\n}\n"}

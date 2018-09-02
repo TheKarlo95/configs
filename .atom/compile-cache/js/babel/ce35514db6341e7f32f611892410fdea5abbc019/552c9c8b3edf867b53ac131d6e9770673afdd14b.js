@@ -1,0 +1,76 @@
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+/** @babel */
+/* eslint-env jasmine, atomtest */
+
+/*
+  This file contains verifying specs for:
+  https://github.com/sindresorhus/atom-editorconfig/issues/121
+
+  Due to a bad implementation of the `insert_final_newline`-logic the final newline
+  is unecessarily stripped and appended even if a single final newline already exists.
+  This messes the undo-history up.
+*/
+
+var _fs = require('fs');
+
+var _fs2 = _interopRequireDefault(_fs);
+
+var _path = require('path');
+
+var _path2 = _interopRequireDefault(_path);
+
+var projectRoot = _path2['default'].join(__dirname, 'fixtures');
+var filePath = _path2['default'].join(projectRoot, 'test.' + _path2['default'].basename(__filename).split('-').shift());
+
+describe('editorconfig', function () {
+	var textEditor = undefined;
+	var textWithOneFinalNewline = '\nThis is a text\nwith a lot of lines,\nwhich have a lot of\ntrailing spaces.\n';
+
+	beforeEach(function () {
+		waitsForPromise(function () {
+			return Promise.all([atom.packages.activatePackage('editorconfig'), atom.workspace.open(filePath)]).then(function (results) {
+				textEditor = results[1];
+			});
+		});
+	});
+
+	afterEach(function () {
+		// remove the created fixture, if it exists
+		runs(function () {
+			_fs2['default'].stat(filePath, function (err, stats) {
+				if (!err && stats.isFile()) {
+					_fs2['default'].unlink(filePath);
+				}
+			});
+		});
+
+		waitsFor(function () {
+			try {
+				return _fs2['default'].statSync(filePath).isFile() === false;
+			} catch (err) {
+				return true;
+			}
+		}, 5000, 'removed ' + filePath);
+	});
+
+	describe('Atom being set to insert a final newline', function () {
+		beforeEach(function () {
+			Object.assign(textEditor.getBuffer().editorconfig.settings, {
+				trim_trailing_whitespace: true, // eslint-disable-line camelcase
+				insert_final_newline: true // eslint-disable-line camelcase
+			});
+		});
+
+		it('should strip not extend the undo-history if a final newline already exists', function () {
+			var buffer = textEditor.getBuffer();
+
+			textEditor.setText(textWithOneFinalNewline);
+
+			var checkpoint = buffer.createCheckpoint();
+			textEditor.save();
+			expect(buffer.getChangesSinceCheckpoint(checkpoint).length).toEqual(0);
+		});
+	});
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RoZWthcmxvOTUvLmF0b20vcGFja2FnZXMvZWRpdG9yY29uZmlnL3NwZWMvaXNzMTIxLXNwZWMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7a0JBWWUsSUFBSTs7OztvQkFDRixNQUFNOzs7O0FBRXZCLElBQU0sV0FBVyxHQUFHLGtCQUFLLElBQUksQ0FBQyxTQUFTLEVBQUUsVUFBVSxDQUFDLENBQUM7QUFDckQsSUFBTSxRQUFRLEdBQUcsa0JBQUssSUFBSSxDQUN6QixXQUFXLFlBQ0gsa0JBQUssUUFBUSxDQUFDLFVBQVUsQ0FBQyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxLQUFLLEVBQUUsQ0FDcEQsQ0FBQzs7QUFFRixRQUFRLENBQUMsY0FBYyxFQUFFLFlBQU07QUFDOUIsS0FBSSxVQUFVLFlBQUEsQ0FBQztBQUNmLEtBQU0sdUJBQXVCLG9GQUlYLENBQUM7O0FBRW5CLFdBQVUsQ0FBQyxZQUFNO0FBQ2hCLGlCQUFlLENBQUM7VUFDZixPQUFPLENBQUMsR0FBRyxDQUFDLENBQ1gsSUFBSSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsY0FBYyxDQUFDLEVBQzdDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxDQUM3QixDQUFDLENBQUMsSUFBSSxDQUFDLFVBQUEsT0FBTyxFQUFJO0FBQ2xCLGNBQVUsR0FBRyxPQUFPLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDeEIsQ0FBQztHQUFBLENBQ0YsQ0FBQztFQUNGLENBQUMsQ0FBQzs7QUFFSCxVQUFTLENBQUMsWUFBTTs7QUFFZixNQUFJLENBQUMsWUFBTTtBQUNWLG1CQUFHLElBQUksQ0FBQyxRQUFRLEVBQUUsVUFBQyxHQUFHLEVBQUUsS0FBSyxFQUFLO0FBQ2pDLFFBQUksQ0FBQyxHQUFHLElBQUksS0FBSyxDQUFDLE1BQU0sRUFBRSxFQUFFO0FBQzNCLHFCQUFHLE1BQU0sQ0FBQyxRQUFRLENBQUMsQ0FBQztLQUNwQjtJQUNELENBQUMsQ0FBQztHQUNILENBQUMsQ0FBQzs7QUFFSCxVQUFRLENBQUMsWUFBTTtBQUNkLE9BQUk7QUFDSCxXQUFPLGdCQUFHLFFBQVEsQ0FBQyxRQUFRLENBQUMsQ0FBQyxNQUFNLEVBQUUsS0FBSyxLQUFLLENBQUM7SUFDaEQsQ0FBQyxPQUFPLEdBQUcsRUFBRTtBQUNiLFdBQU8sSUFBSSxDQUFDO0lBQ1o7R0FDRCxFQUFFLElBQUksZUFBYSxRQUFRLENBQUcsQ0FBQztFQUNoQyxDQUFDLENBQUM7O0FBRUgsU0FBUSxDQUFDLDBDQUEwQyxFQUFFLFlBQU07QUFDMUQsWUFBVSxDQUFDLFlBQU07QUFDaEIsU0FBTSxDQUFDLE1BQU0sQ0FBQyxVQUFVLENBQUMsU0FBUyxFQUFFLENBQUMsWUFBWSxDQUFDLFFBQVEsRUFBRTtBQUMzRCw0QkFBd0IsRUFBRSxJQUFJO0FBQzlCLHdCQUFvQixFQUFFLElBQUk7SUFDMUIsQ0FBQyxDQUFDO0dBQ0gsQ0FBQyxDQUFDOztBQUVILElBQUUsQ0FBQyw0RUFBNEUsRUFBRSxZQUFNO0FBQ3RGLE9BQU0sTUFBTSxHQUFHLFVBQVUsQ0FBQyxTQUFTLEVBQUUsQ0FBQzs7QUFFdEMsYUFBVSxDQUFDLE9BQU8sQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDOztBQUU1QyxPQUFNLFVBQVUsR0FBRyxNQUFNLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztBQUM3QyxhQUFVLENBQUMsSUFBSSxFQUFFLENBQUM7QUFDbEIsU0FBTSxDQUFDLE1BQU0sQ0FBQyx5QkFBeUIsQ0FBQyxVQUFVLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLENBQUM7R0FDdkUsQ0FBQyxDQUFDO0VBQ0gsQ0FBQyxDQUFDO0NBQ0gsQ0FBQyxDQUFDIiwiZmlsZSI6Ii9ob21lL3RoZWthcmxvOTUvLmF0b20vcGFja2FnZXMvZWRpdG9yY29uZmlnL3NwZWMvaXNzMTIxLXNwZWMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQGJhYmVsICovXG4vKiBlc2xpbnQtZW52IGphc21pbmUsIGF0b210ZXN0ICovXG5cbi8qXG4gIFRoaXMgZmlsZSBjb250YWlucyB2ZXJpZnlpbmcgc3BlY3MgZm9yOlxuICBodHRwczovL2dpdGh1Yi5jb20vc2luZHJlc29yaHVzL2F0b20tZWRpdG9yY29uZmlnL2lzc3Vlcy8xMjFcblxuICBEdWUgdG8gYSBiYWQgaW1wbGVtZW50YXRpb24gb2YgdGhlIGBpbnNlcnRfZmluYWxfbmV3bGluZWAtbG9naWMgdGhlIGZpbmFsIG5ld2xpbmVcbiAgaXMgdW5lY2Vzc2FyaWx5IHN0cmlwcGVkIGFuZCBhcHBlbmRlZCBldmVuIGlmIGEgc2luZ2xlIGZpbmFsIG5ld2xpbmUgYWxyZWFkeSBleGlzdHMuXG4gIFRoaXMgbWVzc2VzIHRoZSB1bmRvLWhpc3RvcnkgdXAuXG4qL1xuXG5pbXBvcnQgZnMgZnJvbSAnZnMnO1xuaW1wb3J0IHBhdGggZnJvbSAncGF0aCc7XG5cbmNvbnN0IHByb2plY3RSb290ID0gcGF0aC5qb2luKF9fZGlybmFtZSwgJ2ZpeHR1cmVzJyk7XG5jb25zdCBmaWxlUGF0aCA9IHBhdGguam9pbihcblx0cHJvamVjdFJvb3QsXG5cdGB0ZXN0LiR7cGF0aC5iYXNlbmFtZShfX2ZpbGVuYW1lKS5zcGxpdCgnLScpLnNoaWZ0KCl9YFxuKTtcblxuZGVzY3JpYmUoJ2VkaXRvcmNvbmZpZycsICgpID0+IHtcblx0bGV0IHRleHRFZGl0b3I7XG5cdGNvbnN0IHRleHRXaXRoT25lRmluYWxOZXdsaW5lID0gYFxuVGhpcyBpcyBhIHRleHRcbndpdGggYSBsb3Qgb2YgbGluZXMsXG53aGljaCBoYXZlIGEgbG90IG9mXG50cmFpbGluZyBzcGFjZXMuXFxuYDtcblxuXHRiZWZvcmVFYWNoKCgpID0+IHtcblx0XHR3YWl0c0ZvclByb21pc2UoKCkgPT5cblx0XHRcdFByb21pc2UuYWxsKFtcblx0XHRcdFx0YXRvbS5wYWNrYWdlcy5hY3RpdmF0ZVBhY2thZ2UoJ2VkaXRvcmNvbmZpZycpLFxuXHRcdFx0XHRhdG9tLndvcmtzcGFjZS5vcGVuKGZpbGVQYXRoKVxuXHRcdFx0XSkudGhlbihyZXN1bHRzID0+IHtcblx0XHRcdFx0dGV4dEVkaXRvciA9IHJlc3VsdHNbMV07XG5cdFx0XHR9KVxuXHRcdCk7XG5cdH0pO1xuXG5cdGFmdGVyRWFjaCgoKSA9PiB7XG5cdFx0Ly8gcmVtb3ZlIHRoZSBjcmVhdGVkIGZpeHR1cmUsIGlmIGl0IGV4aXN0c1xuXHRcdHJ1bnMoKCkgPT4ge1xuXHRcdFx0ZnMuc3RhdChmaWxlUGF0aCwgKGVyciwgc3RhdHMpID0+IHtcblx0XHRcdFx0aWYgKCFlcnIgJiYgc3RhdHMuaXNGaWxlKCkpIHtcblx0XHRcdFx0XHRmcy51bmxpbmsoZmlsZVBhdGgpO1xuXHRcdFx0XHR9XG5cdFx0XHR9KTtcblx0XHR9KTtcblxuXHRcdHdhaXRzRm9yKCgpID0+IHtcblx0XHRcdHRyeSB7XG5cdFx0XHRcdHJldHVybiBmcy5zdGF0U3luYyhmaWxlUGF0aCkuaXNGaWxlKCkgPT09IGZhbHNlO1xuXHRcdFx0fSBjYXRjaCAoZXJyKSB7XG5cdFx0XHRcdHJldHVybiB0cnVlO1xuXHRcdFx0fVxuXHRcdH0sIDUwMDAsIGByZW1vdmVkICR7ZmlsZVBhdGh9YCk7XG5cdH0pO1xuXG5cdGRlc2NyaWJlKCdBdG9tIGJlaW5nIHNldCB0byBpbnNlcnQgYSBmaW5hbCBuZXdsaW5lJywgKCkgPT4ge1xuXHRcdGJlZm9yZUVhY2goKCkgPT4ge1xuXHRcdFx0T2JqZWN0LmFzc2lnbih0ZXh0RWRpdG9yLmdldEJ1ZmZlcigpLmVkaXRvcmNvbmZpZy5zZXR0aW5ncywge1xuXHRcdFx0XHR0cmltX3RyYWlsaW5nX3doaXRlc3BhY2U6IHRydWUsIC8vIGVzbGludC1kaXNhYmxlLWxpbmUgY2FtZWxjYXNlXG5cdFx0XHRcdGluc2VydF9maW5hbF9uZXdsaW5lOiB0cnVlIC8vIGVzbGludC1kaXNhYmxlLWxpbmUgY2FtZWxjYXNlXG5cdFx0XHR9KTtcblx0XHR9KTtcblxuXHRcdGl0KCdzaG91bGQgc3RyaXAgbm90IGV4dGVuZCB0aGUgdW5kby1oaXN0b3J5IGlmIGEgZmluYWwgbmV3bGluZSBhbHJlYWR5IGV4aXN0cycsICgpID0+IHtcblx0XHRcdGNvbnN0IGJ1ZmZlciA9IHRleHRFZGl0b3IuZ2V0QnVmZmVyKCk7XG5cblx0XHRcdHRleHRFZGl0b3Iuc2V0VGV4dCh0ZXh0V2l0aE9uZUZpbmFsTmV3bGluZSk7XG5cblx0XHRcdGNvbnN0IGNoZWNrcG9pbnQgPSBidWZmZXIuY3JlYXRlQ2hlY2twb2ludCgpO1xuXHRcdFx0dGV4dEVkaXRvci5zYXZlKCk7XG5cdFx0XHRleHBlY3QoYnVmZmVyLmdldENoYW5nZXNTaW5jZUNoZWNrcG9pbnQoY2hlY2twb2ludCkubGVuZ3RoKS50b0VxdWFsKDApO1xuXHRcdH0pO1xuXHR9KTtcbn0pO1xuIl19

@@ -1,0 +1,2 @@
+'.editor:not(.mini)':
+  'ctrl-e' : 'emmet:expand-abbreviation'

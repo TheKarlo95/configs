@@ -1,0 +1,1 @@
+{"source":"/* General colors */\n/* Guide colors */\n/* For find and replace markers */\n/* Gutter colors */\n/* For git diff info. i.e. in the gutter */\n.select-list .atom-typescript .editor-colors {\n  background-color: #0d1a25;\n  border: solid 0.1em #060d12;\n  border-radius: 3px;\n  padding: 0 10px;\n  font-size: 1.15em;\n  overflow: hidden;\n}\n"}

@@ -1,0 +1,53 @@
+"*":
+  autocomplete: {}
+  "autocomplete-js-import":
+    importTypes: {}
+  autosave:
+    enabled: true
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Fira code"
+    fontSize: 19
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "2f63d8e4-d6e5-46be-8b9d-4c8499cd55f7"
+  fonts:
+    fontFamily: "Nova Mono"
+  "goto-definition":
+    performanceMode: true
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "svg-preview":
+    openPreviewAutomatically: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+".basic.html.text":
+  editor:
+    tabType: "soft"
+".editorconfig.source":
+  editor:
+    preferredLineLength: 120
+    scrollPastEnd: true
+    tabType: "soft"

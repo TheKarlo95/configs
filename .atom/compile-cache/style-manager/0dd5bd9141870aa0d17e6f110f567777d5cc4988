@@ -1,0 +1,1 @@
+{"source":"/* General colors */\n/* Guide colors */\n/* For find and replace markers */\n/* Gutter colors */\n/* For git diff info. i.e. in the gutter */\n.atomts-overlay {\n  background: rgba(0, 0, 0, 0.9);\n  border: 9px solid rgba(0, 0, 0, 0.9);\n}\n.atomts-overlay li {\n  padding: 5px;\n}\n"}

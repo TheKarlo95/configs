@@ -1,0 +1,1 @@
+{"source":"/* General colors */\n/* Guide colors */\n/* For find and replace markers */\n/* Gutter colors */\n/* For git diff info. i.e. in the gutter */\n.atomts-show-type-view {\n  background-color: #112230;\n  border-radius: 3px;\n  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);\n  padding: 0.75em;\n}\n"}

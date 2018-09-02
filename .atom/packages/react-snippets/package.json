@@ -1,0 +1,66 @@
+{
+  "_from": "file:/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+  "_id": "react-snippets@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-81iQjkhwT2Z7Iur4h1N+Y21ZismU73TOo5eU3LSVQP29iYghB82c8RgZaOvVb3ubDzgsoLMq6qPjDvFpLJr2GQ==",
+  "_location": "/react-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-11842-2028-5iu0ys.ee2ev",
+    "raw": "/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+    "rawSpec": "/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+    "saveSpec": "file:/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+    "fetchSpec": "/tmp/d-11842-2028-flg45j.e8vmi/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+  "_shasum": "3add94f7b9c1f9df869c72638524809783ec38d6",
+  "_spec": "/tmp/d-11842-2028-flg45j.e8vmi/package.tgz",
+  "_where": "/tmp/apm-install-dir-11842-2028-5iu0ys.ee2ev",
+  "bugs": {
+    "url": "https://github.com/webbushka/atom-react-snippets/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Atom Snippets for React",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-lintspaces": "^0.3.0"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/webbushka/atom-react-snippets",
+  "keywords": [
+    "react",
+    "snippets",
+    "es6"
+  ],
+  "license": "MIT",
+  "main": "./lib/react-snippets",
+  "name": "react-snippets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbushka/atom-react-snippets.git"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "version": "1.1.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "Gulpfile.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

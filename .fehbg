@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/home/thekarlo95/.config/wall.jpg' 

@@ -1,0 +1,246 @@
+{
+  "_from": "file:/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+  "_id": "editorconfig@2.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-s2aN6jkqrrxNZlEdFV87/ALAxK7816ehVcqdobPh/Qd6qwHyuadS+rlcEZq47HHOsi4GXcjiOwzRKKAHtzuGOg==",
+  "_location": "/editorconfig",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-11842-10343-184v54s.gf91",
+    "raw": "/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+    "rawSpec": "/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+    "saveSpec": "file:/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+    "fetchSpec": "/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+  "_shasum": "6e3c13162ce72800a0775b8a576754357f9e92df",
+  "_spec": "/tmp/d-11842-10343-1kqzift.0oxwg/package.tgz",
+  "_where": "/tmp/apm-install-dir-11842-10343-184v54s.gf91",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sindresorhus/atom-editorconfig/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {
+    "editorconfig": "^0.13.2",
+    "lazy-req": "^1.1.0",
+    "pify": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Helps developers maintain consistent coding styles between different editors",
+  "devDependencies": {
+    "xo": "*"
+  },
+  "engines": {
+    "atom": ">=1.13.0"
+  },
+  "homepage": "https://github.com/sindresorhus/atom-editorconfig#readme",
+  "keywords": [
+    "editorconfig",
+    "format",
+    "code",
+    "style",
+    "code-style"
+  ],
+  "license": "MIT",
+  "name": "editorconfig",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindresorhus/atom-editorconfig.git"
+  },
+  "scripts": {
+    "test": "xo && apm test"
+  },
+  "version": "2.2.2",
+  "xo": {
+    "esnext": true,
+    "globals": [
+      "atom",
+      "document"
+    ],
+    "ignores": [
+      "atom/**"
+    ],
+    "rules": {
+      "import/prefer-default-export": "off"
+    }
+  },
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "bluebird",
+        "version": "3.5.1",
+        "path": "node_modules/bluebird/js/release/bluebird.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.15.1",
+        "path": "node_modules/commander/index.js"
+      },
+      {
+        "name": "editorconfig",
+        "version": "0.13.3",
+        "path": "node_modules/editorconfig/editorconfig.js"
+      },
+      {
+        "name": "lazy-req",
+        "version": "1.1.0",
+        "path": "node_modules/lazy-req/index.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "3.2.0",
+        "path": "node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "pify",
+        "version": "2.3.0",
+        "path": "node_modules/pify/index.js"
+      },
+      {
+        "name": "pseudomap",
+        "version": "1.0.2",
+        "path": "node_modules/pseudomap/map.js"
+      },
+      {
+        "name": "semver",
+        "version": "5.5.0",
+        "path": "node_modules/semver/semver.js"
+      },
+      {
+        "name": "sigmund",
+        "version": "1.0.1",
+        "path": "node_modules/sigmund/sigmund.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "index.js",
+        "lib/checklist.js",
+        "lib/statustile-view.js",
+        "lib/wrapguide-interceptor.js",
+        "node_modules/bluebird/js/browser/bluebird.core.js",
+        "node_modules/bluebird/js/browser/bluebird.core.min.js",
+        "node_modules/bluebird/js/browser/bluebird.js",
+        "node_modules/bluebird/js/browser/bluebird.min.js",
+        "node_modules/bluebird/js/release/any.js",
+        "node_modules/bluebird/js/release/assert.js",
+        "node_modules/bluebird/js/release/async.js",
+        "node_modules/bluebird/js/release/bind.js",
+        "node_modules/bluebird/js/release/bluebird.js",
+        "node_modules/bluebird/js/release/call_get.js",
+        "node_modules/bluebird/js/release/cancel.js",
+        "node_modules/bluebird/js/release/catch_filter.js",
+        "node_modules/bluebird/js/release/context.js",
+        "node_modules/bluebird/js/release/debuggability.js",
+        "node_modules/bluebird/js/release/direct_resolve.js",
+        "node_modules/bluebird/js/release/each.js",
+        "node_modules/bluebird/js/release/errors.js",
+        "node_modules/bluebird/js/release/es5.js",
+        "node_modules/bluebird/js/release/filter.js",
+        "node_modules/bluebird/js/release/finally.js",
+        "node_modules/bluebird/js/release/generators.js",
+        "node_modules/bluebird/js/release/join.js",
+        "node_modules/bluebird/js/release/map.js",
+        "node_modules/bluebird/js/release/method.js",
+        "node_modules/bluebird/js/release/nodeback.js",
+        "node_modules/bluebird/js/release/nodeify.js",
+        "node_modules/bluebird/js/release/promise.js",
+        "node_modules/bluebird/js/release/promise_array.js",
+        "node_modules/bluebird/js/release/promisify.js",
+        "node_modules/bluebird/js/release/props.js",
+        "node_modules/bluebird/js/release/queue.js",
+        "node_modules/bluebird/js/release/race.js",
+        "node_modules/bluebird/js/release/reduce.js",
+        "node_modules/bluebird/js/release/schedule.js",
+        "node_modules/bluebird/js/release/settle.js",
+        "node_modules/bluebird/js/release/some.js",
+        "node_modules/bluebird/js/release/synchronous_inspection.js",
+        "node_modules/bluebird/js/release/thenables.js",
+        "node_modules/bluebird/js/release/timers.js",
+        "node_modules/bluebird/js/release/using.js",
+        "node_modules/bluebird/js/release/util.js",
+        "node_modules/commander/index.js",
+        "node_modules/editorconfig/editorconfig.js",
+        "node_modules/editorconfig/lib/fnmatch.js",
+        "node_modules/editorconfig/lib/ini.js",
+        "node_modules/lazy-req/index.js",
+        "node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/pify/index.js",
+        "node_modules/pseudomap/map.js",
+        "node_modules/pseudomap/pseudomap.js",
+        "node_modules/semver/semver.js",
+        "node_modules/sigmund/bench.js",
+        "node_modules/sigmund/sigmund.js"
+      ],
+      ".json": [
+        "node_modules/bluebird/package.json",
+        "node_modules/commander/package.json",
+        "node_modules/editorconfig/package.json",
+        "node_modules/lazy-req/package.json",
+        "node_modules/lru-cache/package.json",
+        "node_modules/pify/package.json",
+        "node_modules/pseudomap/package.json",
+        "node_modules/semver/package.json",
+        "node_modules/sigmund/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "commands",
+          "grammars",
+          "",
+          "lib",
+          "spec"
+        ],
+        "dependencies": {
+          "editorconfig": "^0.13.2",
+          "lazy-req": "^1.1.0",
+          "pify": "^2.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/editorconfig",
+          "node_modules/editorconfig/lib"
+        ],
+        "dependencies": {
+          "bluebird": "^3.0.5",
+          "commander": "^2.9.0",
+          "lru-cache": "^3.2.0",
+          "semver": "^5.1.0",
+          "sigmund": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lru-cache/lib",
+          "node_modules/lru-cache",
+          "node_modules/lru-cache/test"
+        ],
+        "dependencies": {
+          "pseudomap": "^1.0.1"
+        }
+      }
+    ]
+  }
+}

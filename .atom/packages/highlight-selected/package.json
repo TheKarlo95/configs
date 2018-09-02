@@ -1,0 +1,128 @@
+{
+  "_from": "file:/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+  "_id": "highlight-selected@0.13.1",
+  "_inBundle": false,
+  "_integrity": "sha512-VCN2mHAwbnA7azo5GQsY4GRMWrRnx4oMzSfTN8Zm5UtJnRRg3BdbdGM8YUx2LD5alfsHUvzrKlN2qs656TLfVQ==",
+  "_location": "/highlight-selected",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-11842-9203-t7j6wj.7povi",
+    "raw": "/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+    "rawSpec": "/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+    "saveSpec": "file:/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+    "fetchSpec": "/tmp/d-11842-9203-1wszlas.vrqo/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+  "_shasum": "8b6ce153f680dfd60ab003835e666266c4420e5f",
+  "_spec": "/tmp/d-11842-9203-1wszlas.vrqo/package.tgz",
+  "_where": "/tmp/apm-install-dir-11842-9203-t7j6wj.7povi",
+  "bugs": {
+    "url": "https://github.com/richrace/highlight-selected/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {
+    "grim": "^2.0.1"
+  },
+  "deprecated": false,
+  "description": "Highlights the current word selected when double clicking",
+  "devDependencies": {
+    "coffee-script": "1.9.0",
+    "coffeelint": "1.8.1",
+    "coffeelint-jasmine": "0.0.2"
+  },
+  "dist": {
+    "shasum": "7c9da46b1412aceb069f8ca2ca54d014986ad408"
+  },
+  "engines": {
+    "atom": ">=1.13.0 <2.0.0"
+  },
+  "homepage": "https://github.com/richrace/highlight-selected",
+  "license": "MIT",
+  "main": "./lib/highlight-selected",
+  "name": "highlight-selected",
+  "providedServices": {
+    "highlightSelected": {
+      "description": "Exposes Highlight Selected Events",
+      "versions": {
+        "1.0.0": "provideHighlightSelectedV1Deprecated",
+        "2.0.0": "provideHighlightSelectedV2"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richrace/highlight-selected.git"
+  },
+  "version": "0.13.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "event-kit",
+        "version": "2.4.0",
+        "path": "node_modules/event-kit/lib/event-kit.js"
+      },
+      {
+        "name": "grim",
+        "version": "2.0.2",
+        "path": "node_modules/grim/lib/grim.js"
+      }
+    ],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "node_modules/event-kit/api.json",
+        "node_modules/event-kit/package.json",
+        "node_modules/grim/package.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "lib/escape-reg-exp.coffee",
+        "lib/highlight-selected.coffee",
+        "lib/highlighted-area-view.coffee",
+        "lib/status-bar-view.coffee"
+      ],
+      ".js": [
+        "node_modules/event-kit/lib/composite-disposable.js",
+        "node_modules/event-kit/lib/disposable.js",
+        "node_modules/event-kit/lib/emitter.js",
+        "node_modules/event-kit/lib/event-kit.js",
+        "node_modules/grim/lib/deprecation.js",
+        "node_modules/grim/lib/grim.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "",
+          "lib",
+          "spec/fixtures",
+          "spec"
+        ],
+        "dependencies": {
+          "grim": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/grim/lib",
+          "node_modules/grim"
+        ],
+        "dependencies": {
+          "event-kit": "^2.0.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "_from": "file:/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+  "_id": "minimap-pigments@0.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-1M0VjZXWXOF2xKRf9hcq/bGEO0nY0oK4loEQ8UnQWCbz8E2KipeGIUz7HlBXHfkLstgMyTrhgs2CJNWZ8QWEyA==",
+  "_location": "/minimap-pigments",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-11842-8998-tmtpiq.ir5oi",
+    "raw": "/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+    "rawSpec": "/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+    "saveSpec": "file:/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+    "fetchSpec": "/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+  "_shasum": "fa6abb5dfc73f1e56c1d700e16720eb4655252b3",
+  "_spec": "/tmp/d-11842-8998-1a9dynw.w3xig/package.tgz",
+  "_where": "/tmp/apm-install-dir-11842-8998-tmtpiq.ir5oi",
+  "bugs": {
+    "url": "https://github.com/abe33/minimap-pigments/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "minimap": {
+      "versions": {
+        "1.0.0": "consumeMinimapServiceV1"
+      }
+    },
+    "pigments.api": {
+      "versions": {
+        "1.0.0": "consumePigmentsServiceV1"
+      }
+    }
+  },
+  "dependencies": {
+    "event-kit": ">= 0.7.2"
+  },
+  "deprecated": false,
+  "description": "An Atom plugin to display pigments colors in the Minimap.",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/abe33/minimap-pigments#readme",
+  "keywords": [
+    "minimap",
+    "pigments",
+    "colors",
+    "palette"
+  ],
+  "license": "MIT",
+  "main": "./lib/minimap-pigments",
+  "name": "minimap-pigments",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abe33/minimap-pigments.git"
+  },
+  "version": "0.2.2",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "event-kit",
+        "version": "2.4.0",
+        "path": "node_modules/event-kit/lib/event-kit.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/minimap-pigments-binding.coffee",
+        "lib/minimap-pigments.coffee"
+      ],
+      ".json": [
+        "node_modules/event-kit/api.json",
+        "node_modules/event-kit/package.json",
+        "package.json"
+      ],
+      ".js": [
+        "node_modules/event-kit/lib/composite-disposable.js",
+        "node_modules/event-kit/lib/disposable.js",
+        "node_modules/event-kit/lib/emitter.js",
+        "node_modules/event-kit/lib/event-kit.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "event-kit": ">= 0.7.2"
+        }
+      }
+    ]
+  }
+}

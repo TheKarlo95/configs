@@ -1,0 +1,9 @@
+[user]
+	email = vrbic.karlo@gmail.com
+	name = TheKarlo95
+[credential]
+	helper = cache --timeout=3600
+[core]
+	autocrlf = input
+[color]
+	ui = auto

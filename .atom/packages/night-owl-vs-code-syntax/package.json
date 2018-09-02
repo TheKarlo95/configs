@@ -1,0 +1,55 @@
+{
+  "_from": "file:/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+  "_id": "night-owl-vs-code-syntax@0.5.0",
+  "_inBundle": false,
+  "_integrity": "sha512-35N4V/++XZputEcChgXMkUmXn0FsnlqX5dkMBMKWqN16Bhw+oSqPHf+mNxKMVuImYY64HyvOAHYdyC2hkFGKBg==",
+  "_location": "/night-owl-vs-code-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-11854-4255-1btkcxq.w8cw",
+    "raw": "/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+    "rawSpec": "/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+    "saveSpec": "file:/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+    "fetchSpec": "/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+  "_shasum": "d7a885c381d0b060ae65666e3502227e06916a41",
+  "_spec": "/tmp/d-11854-4255-yp61ym.2ffq8/package.tgz",
+  "_where": "/tmp/apm-install-dir-11854-4255-1btkcxq.w8cw",
+  "bugs": {
+    "url": "https://github.com/CragVFX/night-owl-vs-code-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "tried to make night owl for atom",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/CragVFX/night-owl-vs-code-syntax#readme",
+  "keywords": [
+    "ui",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "night-owl-vs-code-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CragVFX/night-owl-vs-code-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.5.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

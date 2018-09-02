@@ -1,0 +1,50 @@
+{
+  "_from": "file:/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+  "_id": "language-javascript-jsx@0.3.7",
+  "_inBundle": false,
+  "_integrity": "sha512-KVY+WuAlQIpVMHQAckACLaZBvrN2SyMODT+rqpJUgzHLvlrY1LInGkbSoEfJe4D9OXsbSgW58aY7hou5LL2b9w==",
+  "_location": "/language-javascript-jsx",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/tmp/apm-install-dir-118426-6400-fudrf5.0pcrh",
+    "raw": "/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+    "rawSpec": "/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+    "saveSpec": "file:/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+    "fetchSpec": "/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+  "_shasum": "3bb6f06e5178e278ce95274b5553ffae32c9a4cf",
+  "_spec": "/tmp/d-118426-6400-7rfy17.vr1kf/package.tgz",
+  "_where": "/tmp/apm-install-dir-118426-6400-fudrf5.0pcrh",
+  "bugs": {
+    "url": "https://github.com/subtlegradient/language-javascript-jsx/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "JavaScript, ES6, ES7, React JSX, Flow, etc… by SubtleGradient of Facebook",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/subtlegradient/language-javascript-jsx#readme",
+  "license": "MIT",
+  "name": "language-javascript-jsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subtlegradient/language-javascript-jsx.git"
+  },
+  "version": "0.3.7",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
